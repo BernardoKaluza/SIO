@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="">
+<head>
+
+    <title>... Wiki</title>
+    <!--========================================
+    Meta
+    ===========================================-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Disable tap highlight on IE -->
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <!-- Web Application Manifest -->
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="xDocs">
+    <link rel="icon" sizes="192x192" href="static/assets/img/basic/chrome-touch-icon-192x192.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Web Starter Kit">
+    <link rel="apple-touch-icon" href="static/assets/img/basic/apple-touch-icon.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="assets/img/basic/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#55acee">
+    <!-- Color the status bar on mobile devices -->
+    <meta name="theme-color" content="#55acee">
+
+    <!--========================================
+    CSS
+    ===========================================-->
+     <link href={{ url_for('static', filename ='assets/css/custom.css')}} rel="stylesheet" type="text/css">
+    <!--put your custom css on the file below-->
+     <link href={{ url_for('static', filename ='assets/css/style.css')}} rel="stylesheet" type="text/css">
+
+     <style> #customers {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      
+      #customers td, #customers th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+      
+      #customers tr:nth-child(even){background-color: #f2f2f2;}
+      
+      #customers tr:hover {background-color: #ddd;}
+      #customers thead th{
+        background-color: gray;
+      }
+      #customers tbody th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #d7d7d7;
+        color: white;
+      }
+    </style>
+
+
+</head>
+<body class="quickSectionActive">
+
+    <div class="bodyWrap">
+        <header class="doc-header">
+            <div class="logoWrap">
+        <a href="/"><img src="/static/assets/img/basic/logo.png" alt="/" class="mx-auto d-block"></a>
+            </div>
+            <a href="#" class="nav-trigger"><i class="fa fa-navicon"></i></a>
+             <ul class="main-nav">
+                <li><a href="/">Home</a></li>
+                <li class="active"><a href="/content">Content</a>
+                </li>
+                    
+                <li ><a href="/about">About</a></li>
+                {%if isLogged == 0%} 
+                    <li><a href="/login">Log in / Sign up</a></li>
+                {%else %}
+                    <li><a href="/logout">Logout</a></li>
+                {%endif%}
+            </ul>
+            <span class="copyRights">&copy; 2016, All rights reserved</span>
+        </header>
+        <button class="toggleOptionPanel"><i class="fa fa-align-right"></i></button>
+        <div class="optionsPanel">
+            <button class="toggleOptionPanel"><i class="fa fa-align-right"></i></button>
+            <div class="inner">
+                <div class="search-widget">
+                    <form>
+                        <div class="input-block">
+                            <label for="searchDocs">SEARCH ANYTHING</label>
+                            <input id="searchDocs" type="text">
+                        </div>
+                        <button type="submit"><i class="fa fa-search"></i> </button>
+                    </form>
+                </div>
+
+            
+
+            </div> 
+        </div>
+        <main class="contentArea">
+            <div class="contentAreaInner clearfix">
+                <div class="row">
+                <div class="col-xs-12 col-md-4" style="padding-top: 5%;">>
+                  
+                  
+                  <a href="/"><img src="{{ champion[0][1] }}" alt="/" class="mx-auto d-block"></a>
+
+                  
+                </div>
+                <div class="col-xs-12 col-md-8">                             
+                    <table id="customers">
+                        <thead>
+                        <tr>
+                          <th>Champion Details</th>
+                          <th></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                          <th>NAME</th>
+                          <td>{{ champion[0][2] }}</td>
+                        </tr>
+                        <tr>
+                          <th>REGION</th>
+                          <td>{{ champion[0][3] }}</td>
+                        </tr>
+                        <tr>
+                          <th>COST</th>
+                          <td>{{ champion[0][4] }}</td>
+                        </tr>
+                        <tr>
+                          <th>KEYWORDS</th>
+                          <td>{{ champion[0][5] }}</td>
+                        </tr>
+                        <tr>
+                          <th>ABILITY</th>
+                          <td>{{ champion[0][6] }}</td>
+                        </tr>
+                        <tr>
+                          <th>LEVEL UP</th>
+                          <td>{{ champion[0][7] }}</td>
+                        </tr>
+                        <tr>
+                          <th>ATTACK</th>
+                          <td>{{ champion[0][8] }}</td>
+                        </tr>
+                        <tr>
+                          <th>HEALTH</th>
+                          <td>{{ champion[0][9] }}</td>
+                        </tr>
+                        <tr>
+                          <th>LORE</th>
+                          <td>{{ champion[0][10] }}</td>
+                        </tr>
+                        </tbody>
+                      </table>
+                </div>
+               
+               
+
+                </div>
+            </div><!--contenAreaInner-->
+        </main>
+
+    </div>
+
+    <!--========================================
+    Javascript
+    ===========================================-->
+
+    
+    <script src={{ url_for('static', filename = 'assets/lib/jquery/dist/jquery.min.js')}}></script>
+    <script src={{ url_for('static', filename = 'assets/js/app.js')}}></script>
+
+</body>
+</html>
+

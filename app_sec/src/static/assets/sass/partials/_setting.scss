@@ -1,0 +1,52 @@
+/*some basic settings/configuration for themes i.e assignment of font size to mostly used tags*/
+
+body{
+  background:$white;
+  font-family: 'montserrat', sans-serif;
+  font-size:$bodyFontSize;
+  color:$defaultTextColor;
+  font-weight:$defaultFontWeight
+}
+img{
+  max-width:100%;
+}
+a{
+  outline:none !important;
+  color:$secondaryColor;
+}
+h1,h2,h3,h4,h5{
+  margin:15px 0;
+  color:$defaultHeadingColor;
+  font-weight:400;
+  .heading &{
+    margin-top:0;
+  }
+}
+h1{
+  font-size:$h1;
+}
+h2{
+  font-size:$h2;
+}
+h3{
+  font-size:$h3;;
+}
+h4{
+  font-size:$h4;
+}
+h5{
+  font-size:$h5;
+}
+h6{
+  font-size:$bodyFontSize;
+}
+.bodyWrap{
+  overflow:hidden;
+  height:100%;
+  position:relative;
+}
+.hidden-lg{
+  @media(min-width:1200px){
+      display:none;
+  }
+}

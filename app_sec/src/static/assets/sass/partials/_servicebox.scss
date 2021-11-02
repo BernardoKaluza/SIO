@@ -1,0 +1,19 @@
+/*Styles Related to Service Boxes*/
+
+.service {
+  margin-bottom:$services-margin;
+  h3{
+	padding-left:$service-pad;
+  }
+  .inner {
+	position:relative;
+	padding-left:$service-pad;
+	.fa, img {
+	  position:absolute;
+	  left:0;
+	  top:0;
+	  font-size:40px;
+	  color:$secondaryColor;
+	}
+  }
+}

@@ -1,0 +1,45 @@
+/*Table of content
+=================
+1-Bootstrap custom
+2-Fonts
+3-Setting ( font sizes and other general settings )
+4- Menu
+5- Options Panel ( panel beside main menu to display quick actions )
+6- Css for Main content area
+7- service boxes
+8- Text Widget
+9- Accordions
+10-Buttons
+11-Form elements
+12-Page Headings
+13-User Box
+14-Steps ( Process phases )
+15-Knowledge base
+16-walk through
+17-discussion
+18-Overall CSS rules
+19- Font Awesome
+
+*/
+
+@import "compass";
+@import "partials/variables";
+@import "partials/bootstrap-custom";
+@import "partials/fonts";
+@import "partials/setting";
+@import "partials/menu";
+@import "partials/optionspanel";
+@import "partials/main";
+@import "partials/servicebox";
+@import "partials/text-widget";
+@import "partials/accordions";
+@import "partials/buttons";
+@import "partials/form-fields";
+@import "partials/page-heading";
+@import "partials/user-box";
+@import "partials/steps";
+@import "partials/knowledgebase";
+@import "partials/walkthrough";
+@import "partials/discussion";
+@import "partials/general";
+@import "../lib/font-awesome/scss/font-awesome";

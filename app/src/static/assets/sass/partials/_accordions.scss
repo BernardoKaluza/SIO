@@ -1,0 +1,67 @@
+.accordion{
+  margin-bottom:4px;
+  background:$white;
+  header{
+	color:$defaultHeadingColor;
+	position:relative;
+	text-transform:uppercase;
+	font-weight:400;
+	.fa{
+	  position:absolute;
+	  left:12px;
+	  top:50%;
+	  line-height:0;
+	  color:$secondaryColor;
+	}
+	&:before{
+	  content: "\f107";
+	  font-family: 'FontAwesome';
+	  position:absolute;
+	  line-height:0;
+	  right:20px;
+	  color:$secondaryColor;
+	  top:50%;
+	  z-index:0;
+	  font-size:$h4;
+	}
+	a{
+	  @include ellipsis();
+	  display:block;
+	  padding:15px 40px;
+	  text-decoration:none;
+	  color:inherit;
+	  position:relative;
+	  z-index:10;
+	}
+  }
+  .accordion-content{
+	font-size:$smFontSize;
+	padding:10px 0;
+	border-top:3px solid $secondaryBG;
+	display:none;
+	ul{
+	  display:block;
+	  margin:0;
+	  padding:0;
+	  li{
+		display:block;
+		a{
+		  display:block;
+		  position:relative;
+		  padding:8px 20px 8px 45px;
+		  color:inherit;
+		  text-decoration:none;
+		  &:hover{
+			color:$secondaryColor;
+		  }
+		  .fa{
+			position:absolute;
+			left:20px;
+			top:10px;
+			color:$secondaryColor;
+		  }
+		}
+	  }
+	}
+  }
+}

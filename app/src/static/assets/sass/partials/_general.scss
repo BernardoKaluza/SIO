@@ -1,0 +1,33 @@
+h1,h2,h3,h4,h5,h6{
+  span{
+	color:$secondaryColor;
+  }
+}
+.text-left{
+  text-align:left !important;
+}
+.text-right{
+  text-align:right !important;
+}
+.text-center{
+  text-align:center !important;
+}
+.empty-graphics-div {
+  height:364px;
+  padding-top:128px;
+  margin-top:-80px;
+  margin-bottom:30px;
+  background:url('#{$projectImages}/graphics.png') center bottom repeat-x;
+}
+.no-pad-left{
+  padding-left:0 !important;
+}
+.no-pad-right{
+  padding-right:0 !important;
+}
+.swap-able{
+  display:none;
+}
+.swap-able.active{
+  display:block;
+}

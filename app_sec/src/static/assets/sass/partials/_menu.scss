@@ -1,0 +1,145 @@
+
+/*Main Navigation Area*/
+
+.doc-header{
+  @include transition-property(all);
+  @include transition-duration(0.3s);
+  @include transition-timing-function(ease-in);
+  position:fixed;
+  z-index:999;
+  left:0;
+  top:0;
+  height:100%;
+  width:280px;
+  background:$primaryColor;
+  color:$white;
+  font-size:$smFontSize;
+  @media(max-width:1023px){
+	font-size:$h4;
+  }
+  padding:50px;
+  @media(max-width:1023px){
+	position:relative;
+	left:auto;
+	top:auto;
+	width:100%;
+	padding:15px;
+  }
+  body.quickSectionActive &{
+	width:230px;
+	padding-right:10px;
+	@media(max-width:1023px){
+	  width:100%;
+	  padding:15px;
+	}
+  }
+  ul{
+	padding:0;
+	margin:0;
+	li{
+	  display:block;
+	  a{
+		display:block;
+		color:$white;
+		&:hover{
+		  color:$secondaryColor;
+		  @media(max-width:1023px){
+			color:$white;
+		  }
+		}
+	  }
+	}
+	&.main-nav > li{
+	  > a{
+		text-decoration:none;
+		padding:10px 20px;
+		position:relative;
+	  }
+	  &.active > a{
+		color:$secondaryColor;
+		@media(max-width:1023px){
+		  color:$primaryColor;
+		}
+	  }
+	  > a:hover:before,&.active a:before{
+		font-family: 'FontAwesome',sans-serif;
+		content: "\f0da";
+		position:absolute;
+		left:0;
+		top:50%;
+		line-height:0;
+		@media(max-width:1023px){
+		  display:none;
+		}
+	  }
+	}
+	&.socialLinks{
+	  width:40px;
+	  position:absolute;
+	  left:0;
+	  top:150px;
+	  a{
+		background:$secondaryColor;
+		color:inherit;
+		line-height:40px;
+		font-size:$h4;
+		text-align:center;
+		&:hover{
+		  background:$white;
+		}
+	  }
+	  @media(max-width:1023px){
+		&{
+		  display:none;
+		}
+	  }
+	}
+	&.main-nav{
+	  @media(max-width:1023px){
+		width:200px;
+		position:absolute;
+		right:20px;
+		top:100%;
+		background:$secondaryColor;
+		z-index:99;
+		display:none;
+	  }
+	}
+  }
+  .logoWrap{
+	padding:0 0 60px;
+	@media(max-width:1023px){
+	  padding:0;
+	}
+  }
+  .copyRights{
+	font-size:$xsFontSize;
+	display:block;
+	padding-left:50px;
+	position:absolute;
+	bottom:30px;
+	left:0;
+	width:100%;
+	@media(max-width:1023px){
+	  &{
+		display:none;
+	  }
+	}
+  }
+}
+.nav-trigger{
+  position:absolute;
+  right:20px;
+  top:50%;
+  height:40px;
+  width:40px;
+  line-height:40px;
+  text-align:center;
+  margin-top:-20px;
+  display:block;
+  background:$secondaryBG;
+  color:$secondaryColor;
+  @media(min-width:1024px){
+	display:none;
+  }
+}
