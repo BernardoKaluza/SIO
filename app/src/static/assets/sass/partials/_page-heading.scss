@@ -1,0 +1,43 @@
+.page-header{
+  &.extra-top-pad{
+	padding-top:20px;
+	margin-bottom:20px;
+	&.pad-long{
+		padding-top:80px;
+  	}
+	@media(max-width:650px){
+	  padding-top:0 !important;
+	}
+  }
+
+  h1{
+	font-size:$xlFontSize;
+	color:$defaultTextColor;
+	text-transform:capitalize;
+	font-weight:700;
+	body.quickSectionActive &{
+	  font-size:$h1;
+	}
+	@media(max-width:650px){
+	  font-size:$h1;
+	}
+  }
+  strong{
+	span{
+	  color:$secondaryColor;
+	}
+  }
+}
+.version{
+  background:$secondaryColor;
+  color:$white;
+  padding:5px 15px;
+  position:relative;
+  top:-4px;
+  display:inline-block;
+  font-size:$bodyFontSize;
+}
+.version.status.solved{
+  background:$green;
+
+}

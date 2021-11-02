@@ -1,0 +1,36 @@
+/*Styles Related to main area where all of page content would be loaded*/
+
+.contentArea{
+  @include transition-property(all);
+  @include transition-duration(0.3s);
+  @include transition-timing-function(ease-in);
+  position:relative;
+  body.quickSectionActive &{
+	padding-left:530px;
+	@media(max-width:1023px){
+	  padding-left:280px;
+	}
+	@media(max-width:650px){
+	  padding-left:0;
+	}
+  }
+  padding-left:280px;
+  @media(max-width:650px){
+	padding-left:0;
+  }
+  .contentAreaInner{
+	padding:60px 60px 30px;
+	&.single{
+	  padding:60px 80px 30px;
+	  @media(max-width:650px){
+		padding:0 20px 20px;
+	  }
+	}
+	&.small-canvas{
+	  max-width:900px;
+	}
+	@media(max-width:650px){
+	  padding:0 20px 20px;
+	}
+  }
+}

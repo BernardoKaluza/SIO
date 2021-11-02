@@ -1,0 +1,40 @@
+.kb-list{
+  padding:15px;
+  font-size:12px;
+  .fa{
+	color:$secondaryColor;
+	position:absolute;
+	left:0;
+  }
+  header{
+
+	h4{
+	  padding-left:30px;
+	  position:relative;
+	  i{
+		top:4px;
+	  }
+	}
+  }
+  ul{
+	margin:0;
+	padding:0;
+	li{
+	  display:block;
+	  padding-left:30px;
+	  position:relative;
+	  margin-bottom:10px;
+	  a{
+		display:block;
+		color:inherit;
+		&:hover{
+		  color:$secondaryColor;
+		}
+	  }
+	  .fa{
+		top:0px;
+		font-size:14px;
+	  }
+	}
+  }
+}

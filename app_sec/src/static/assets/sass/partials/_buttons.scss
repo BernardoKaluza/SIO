@@ -1,0 +1,35 @@
+/*Styles Related to Buttons*/
+
+.btn{
+  padding:5px 10px;
+  background:$primaryColor;
+  color:$white;
+  display:inline-block;
+  text-decoration:none !important;
+  border:1px solid $black-2;
+  position:relative;
+  .fa{
+	margin-right:5px;
+  }
+  &.btn-block{
+	width:100%;
+	display:block;
+	padding:10px;
+	font-size:$h3;
+  }
+  &.btn-lg{
+	padding:15px 45px;
+	font-size:$h3;
+	.fa{
+	  margin:0;
+	  position:absolute;
+	  left:20px;
+	  top:50%;
+	  line-height:0;
+	}
+  }
+  &:hover{
+	background:$secondaryColor;
+	color:$white;
+  }
+}

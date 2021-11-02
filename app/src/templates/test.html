@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="">
+<head>
+
+    <title>XDocs - A Knowledge base and documentation theme</title>
+    <!--========================================
+    Meta
+    ===========================================-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Disable tap highlight on IE -->
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <!-- Web Application Manifest -->
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="xDocs">
+    <link rel="icon" sizes="192x192" href="assets/img/basic/chrome-touch-icon-192x192.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Web Starter Kit">
+    <link rel="apple-touch-icon" href="assets/img/basic/apple-touch-icon.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="assets/img/basic/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#55acee">
+    <!-- Color the status bar on mobile devices -->
+    <meta name="theme-color" content="#55acee">
+
+    <!--========================================
+    CSS
+    ===========================================-->
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+    <!--put your custom css on the file below-->
+    <link href="assets/css/custom.css" rel="stylesheet" type="text/css">
+
+
+</head>
+<body class="quickSectionActive">
+
+    <div class="bodyWrap">
+        <header class="doc-header"width="100vw" height="100vw">
+            <div class="logoWrap">
+        <a href="/"><img src="/static/assets/img/basic/logo.png" alt="/" class="mx-auto d-block"></a>
+            </div>
+            <a href="#" class="nav-trigger"><i class="fa fa-navicon"></i></a>
+             <ul class="main-nav">
+                <li><a href="index.html">Home</a></li>
+                <li class="active"><a href="about.html">About</a></li>
+                <li><a href="single.html">Docs page</a></li>
+                {%if isLogged == 0%} 
+                    <li><a href="login">Log in / Sign up</a></li>
+                {%else %}
+                    <li><a href="logout">Logout</a></li>
+                {%endif%}
+            </ul>
+            <span class="copyRights">&copy; 2016, All rights reserved</span>
+        </header>
+        <button class="toggleOptionPanel"><i class="fa fa-align-right"></i></button>
+        <div class="optionsPanel">
+            <button class="toggleOptionPanel"><i class="fa fa-align-right"></i></button>
+            <div class="inner">
+                <div class="search-widget">
+                    <form>
+                        <div class="input-block">
+                            <label for="searchDocs">SEARCH ANYTHING</label>
+                            <input id="searchDocs" type="text">
+                        </div>
+                        <button type="submit"><i class="fa fa-search"></i> </button>
+                    </form>
+                </div>
+
+                <div class="accordion">
+                    <header>
+                        <a href="#">
+                            <i class="fa fa-folder-open"></i>
+                            Wordpress Themes
+                        </a>
+                    </header>
+                    <div class="accordion-content">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-folder-o"></i> WEROCK MUSIC & EVENTS </a></li>
+                            <li><a href="#"><i class="fa fa-folder-o"></i> VOLTOV BLOG MAGZINE </a></li>
+                            <li><a href="#"><i class="fa fa-folder-o"></i> CLINIX LAYERS MEDICAL </a></li>
+                            <li><a href="#"><i class="fa fa-folder-o"></i> 21 MULTIPURPOSE </a></li>
+                            <li><a href="#"><i class="fa fa-folder-o"></i> GFASHION WOOCOMMERCE </a></li>
+                            <li><a href="#"><i class="fa fa-folder-o"></i> PLANET GENERAL STORE </a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="accordion">
+                    <header>
+                        <a href="#">
+                            <i class="fa fa-folder-open"></i>
+                            HTML Themes
+                        </a>
+                    </header>
+                    <div class="accordion-content">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-folder-o"></i> WEROCK MUSIC & EVENTS </a></li>
+                            <li><a href="#"><i class="fa fa-folder-o"></i> VOLTOV BLOG MAGZINE </a></li>
+                            <li><a href="#"><i class="fa fa-folder-o"></i> CLINIX LAYERS MEDICAL </a></li>
+                            <li><a href="#"><i class="fa fa-folder-o"></i> 21 MULTIPURPOSE </a></li>
+                            <li><a href="#"><i class="fa fa-folder-o"></i> GFASHION WOOCOMMERCE </a></li>
+                            <li><a href="#"><i class="fa fa-folder-o"></i> PLANET GENERAL STORE </a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="accordion">
+                    <header>
+                        <a href="#">
+                            <i class="fa fa-folder-open"></i>
+                            PSD Themes
+                        </a>
+                    </header>
+                    <div class="accordion-content">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-folder-o"></i> WEROCK MUSIC & EVENTS </a></li>
+                            <li><a href="#"><i class="fa fa-folder-o"></i> VOLTOV BLOG MAGZINE </a></li>
+                            <li><a href="#"><i class="fa fa-folder-o"></i> CLINIX LAYERS MEDICAL </a></li>
+                            <li><a href="#"><i class="fa fa-folder-o"></i> 21 MULTIPURPOSE </a></li>
+                            <li><a href="#"><i class="fa fa-folder-o"></i> GFASHION WOOCOMMERCE </a></li>
+                            <li><a href="#"><i class="fa fa-folder-o"></i> PLANET GENERAL STORE </a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="accordion">
+                    <header>
+                        <a href="#">
+                            <i class="fa fa-folder-open"></i>
+                            Ghost Themes
+                        </a>
+                    </header>
+                    <div class="accordion-content">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-folder-o"></i> WEROCK MUSIC & EVENTS </a></li>
+                            <li><a href="#"><i class="fa fa-folder-o"></i> VOLTOV BLOG MAGZINE </a></li>
+                            <li><a href="#"><i class="fa fa-folder-o"></i> CLINIX LAYERS MEDICAL </a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!--========================================
+    Javascript
+    ===========================================-->
+
+    <script src="assets/lib/jquery/dist/jquery.min.js"></script>
+    <script src="assets/js/app.js"></script>
+
+</body>
+</html>

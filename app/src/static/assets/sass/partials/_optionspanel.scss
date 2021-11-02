@@ -1,0 +1,88 @@
+/*optionPanel, space beside main menu to display quick actions i.e login/register, documentation references or alerts*/
+
+.toggleOptionPanel {
+  @media(max-width:1023px){
+	display:none;
+  }
+  body.quickSectionActive &{
+	left:530px;
+	visibility:hidden;
+
+  }
+  .optionsPanel &{
+	position:absolute;
+	top:60px;
+	left:auto;
+	background:none;
+	right:0;
+	@include transition-duration(0.6s);
+  }
+  body.quickSectionActive .optionsPanel &{
+	top:0;
+	left:auto;
+	visibility:visible;
+  }
+  @include transition-property(all);
+  @include transition-duration(0.3s);
+  @include transition-timing-function(ease-in);
+  border:none;
+  background:$secondaryBG;
+  color:$secondaryColor;
+  font-size:$h4;
+  width:40px;
+  height:40px;
+  position:absolute;
+  left:280px;
+  z-index:999;
+  top:60px;
+
+}
+
+.optionsPanel {
+  padding:50px 10px 10px;
+  @include transition-property(all);
+  @include transition-duration(0.3s);
+  @include transition-timing-function(ease-in);
+  position:fixed;
+  left:0;
+  overflow-x:hidden;
+  overflow-y:auto;
+  height:100%;
+  top:0;
+  z-index:990;
+  width:100px;
+  visibility:hidden;
+  background:$secondaryBG;
+  @media(max-width:1023px){
+	left:0;
+	width:280px;
+	visibility:visible;
+	padding-top:100px;
+	position:absolute;
+  }
+  body.quickSectionActive &{
+	width:320px;
+	left:230px;
+	visibility:visible;
+	@media(max-width:1023px){
+	  left:0;
+	  width:280px;
+	}
+	@media(max-width:650px){
+	  width:94%;
+	}
+  }
+  .inner{
+	position:relative;
+  }
+  form .fa{
+	margin-right:5px;
+	color:$secondaryColor;
+  }
+  @media(max-width:650px){
+	width:94%;
+	margin:20px auto 30px;
+	position:relative;
+	padding:20px;
+  }
+}
